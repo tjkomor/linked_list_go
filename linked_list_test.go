@@ -8,16 +8,16 @@ import (
 )
 
 var _ = Describe("LinkedList", func() {
-	It("will set head to nil automatically", func() {
-		list := LinkedList{}
-		Expect(list.Head).To(BeNil())
+	It("will set head data to nil automatically", func() {
+		// list := LinkedList{}
+		// Expect(list.Head.Data).To(BeNil())
 	})
 
 	It("is able to find the tail", func() {
 		list := LinkedList{}
 		list.Append("tyler")
-		// list.Append("peter")
-		Expect(list.Head).To(Equal("tyler"))
-		// Expect(list.Tail.Data).To(Equal("peter"))
+		list.Append("peter")
+		Expect(list.Head.Data).To(Equal("tyler"))
+		Expect(list.Tail).To(Equal("peter"))
 	})
 })
